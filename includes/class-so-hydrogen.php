@@ -78,7 +78,7 @@ class So_Hydrogen {
 		$this->set_locale();
 		$this->define_admin_hooks();
 		$this->define_public_hooks();
-        $this->define_sidebars();
+        	$this->define_sidebars();
 
 	}
 
@@ -168,12 +168,13 @@ class So_Hydrogen {
 	 *
 	 * @since    1.0.0
 	 * @access   private
-     * @example  $this->loader->add_sidebar( name, ID, description );
+     	 * @example  $this->loader->add_sidebar( name, ID, description );
 	 */
 	private function define_sidebars() {
-        
-        $this->loader->add_sidebar( 'Teste', 'teste-sidebar' );
-        $this->loader->add_sidebar( 'dfdfdf', 'teste-sidebar-2', 'Widget Área para testar o conceito' );
+        	
+		// Examples - first without description, which creates a new sidebar using NULL as default value for that.
+        	// $this->loader->add_sidebar( 'Teste', 'teste-sidebar' );
+        	// $this->loader->add_sidebar( 'dfdfdf', 'teste-sidebar-2', 'Widget Área para testar o conceito' );
         
     }
 
