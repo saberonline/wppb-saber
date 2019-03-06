@@ -48,7 +48,7 @@ class So_Hydrogen_Loader {
 	 * @access   protected
 	 * @var      array    $widget_areas    The widget areas registered with WordPress to fire when the plugin loads.
 	 */
-    protected $widget_areas;
+    	protected $widget_areas;
 
 	/**
 	 * Initialize the collections used to maintain the actions and filters.
@@ -59,7 +59,7 @@ class So_Hydrogen_Loader {
 
 		$this->actions = array();
 		$this->filters = array();
-        $this->widget_areas = array();
+        	$this->widget_areas = array();
         
 	}
 
@@ -146,9 +146,9 @@ class So_Hydrogen_Loader {
 	private function areas( $areas, $widget_name, $widget_ID, $widget_description ) {
 
 		$areas[] = array(
-				'name'              => $widget_name,
-				'id'                => $widget_ID,
-				'description'       => $widget_description,
+			'name'              => $widget_name,
+			'id'                => $widget_ID,
+			'description'       => $widget_description,
 		);
 
 		return $areas;
@@ -182,13 +182,13 @@ class So_Hydrogen_Loader {
         foreach ( $this->widget_areas as $widget_name ) {
             
         register_sidebar(array(
-				'name'              => $widget_name['name'],
-				'id'                => $widget_name['id'],
-				'description'       => $widget_name['description'],
-				'before_widget'     => '<div id="%1$s" class="col-md widget-container align-self-center %2$s">',
-				'after_widget'      => '</div>',
-				'before_title'      => '<h3 class="widget-title">',
-				'after_title'       => '</h3>',
+			'name'              => $widget_name['name'],
+			'id'                => $widget_name['id'],
+			'description'       => $widget_name['description'],
+			'before_widget'     => '<div id="%1$s" class="col-md widget-container align-self-center %2$s">',
+			'after_widget'      => '</div>',
+			'before_title'      => '<h3 class="widget-title">',
+			'after_title'       => '</h3>',
 			));
             
         }
